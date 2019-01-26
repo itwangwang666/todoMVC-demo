@@ -21,9 +21,9 @@
 				<label for="toggle-all" @click="checkAll">Mark all as complete</label>
 				<ul class="todo-list">
 					
-					<li :class="{completed:item.completed,editing:item.flag}" v-for="(item,index) in list" :key="item.id" @dblclick="showInfo(item)">
+					<li :class="{completed:item.completed,editing:item.flag}" v-for="(item,index) in list" :key="item.id" @dblclick="showInfo(index)">
 						<div class="view">
-							<input class="toggle" type="checkbox" :checked="item.completed" @click="checkNum(item)">
+							<input class="toggle" type="checkbox" :checked="item.completed" @click="checkNum(index)">
 							<label>{{item.title}}</label>
 							<button class="destroy" @click="del(index)"></button>
 						</div>
@@ -38,10 +38,10 @@
 				<!-- Remove this if you don't implement routing -->
 				<ul class="filters">
 					<li>
-						<a class="selected" href="#/">All</a>
+						<a class="selected" href="#/" @click="allCom">All</a>
 					</li>
 					<li>
-						<a href="#/active">Active</a>
+						<a href="#/active" @click="activeCom">Active</a>
 					</li>
 					<li>
 						<a href="#/completed" @click="com">Completed</a>
