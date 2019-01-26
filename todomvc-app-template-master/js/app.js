@@ -8,9 +8,9 @@
 			focusState: '',
 			editData: '',
 			list: [
-				{ id: 1, title: '买菜', completed: false, flag: false },
-				{ id: 2, title: '买肉', completed: false, flag: false },
-				{ id: 3, title: '买大饼', completed: false, flag: false }
+				// { id: 1, title: '买菜', completed: false, flag: false },
+				// { id: 2, title: '买肉', completed: false, flag: false },
+				// { id: 3, title: '买大饼', completed: false, flag: false }
 			]
 		},
 		methods: {
